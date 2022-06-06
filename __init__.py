@@ -18,24 +18,26 @@ class DuckFact(TextApp):
         super().on_activate()
         self.rotate()
 
+        #self.window.flow_lines(True)
         self.window.println("Connecting to wifi...")
         self.window.println()
-        self.window.println("if this fails, keep trying")
+        self.window.println("I'll keep trying!")
         self.window.println()
 
         wifi_attempts = 0
         while not wifi.status():
-            wifi.stop()
+            # wifi.stop()
             wifi_attempts += 1
-            self.window.println("attempt {}".format(wifi_attempts))
+            self.window.println("Attempt {}".format(wifi_attempts))
             wifi.connect()
             wifi.wait()
 
         if wifi.status():
-            self.window.println("loading DUCK FACT...")
+            self.window.println()
+            self.window.println("Getting you a DUCK FACT...")
             fact_json = urequests.get("https://03vpefsitf.execute-api.eu-west-1.amazonaws.com/prod/")
+            self.window.println("found one...")
             self.duck = ujson.loads(fact_json.content)
-            self.window.println("loaded!")
             wifi.disconnect()
 
         self.quack()
@@ -47,9 +49,15 @@ class DuckFact(TextApp):
         self.window.redraw()
         x = 2
         y = 13
-        self.window.display.text(font, self.duck["fact"], x, y, WHITE, BLACK)
+
+        message = self.duck["fact"]
+
+        for line in self.window.flow_lines(message):
+            self.window.display.text(font, line, x, y, WHITE, BLACK)
+            y += font.HEIGHT+1
+
         y += font.HEIGHT+1
-        self.window.display.text(font, "", x, y, WHITE, BLACK)
+        self.window.display.text(font, "QUACK!", x, y, WHITE, BLACK)
 
 
 main = DuckFact
