@@ -47,7 +47,7 @@ class DuckFact(TextApp):
         self.window.redraw()
         x = 2
         y = 13
-        self.window.display.text(font, duck["fact"], x, y, WHITE, BLACK)
+        self.window.display.text(font, self.duck["fact"], x, y, WHITE, BLACK)
         y += font.HEIGHT+1
         self.window.display.text(font, "", x, y, WHITE, BLACK)
 
