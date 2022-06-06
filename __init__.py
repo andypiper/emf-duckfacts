@@ -18,7 +18,6 @@ class DuckFact(TextApp):
         super().on_activate()
         self.rotate()
 
-        #self.window.flow_lines(True)
         self.window.println("Connecting to wifi...")
         self.window.println()
         self.window.println("I'll keep trying!")
