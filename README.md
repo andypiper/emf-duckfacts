@@ -5,6 +5,6 @@ Source [here](https://github.com/andypiper/emf-duckfacts)
 
 Wants to be on wifi to grab facts.
 
-TODO: make it look nicer, and add true/false options
-TODO: add scroll / back / more facts
-TODO: make it QUACK
+ - TODO: make it look nicer, and add true/false options
+ - TODO: add scroll / back / more facts
+ - TODO: make it QUACK
