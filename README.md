@@ -2,7 +2,7 @@
 
 An app for the TiDAL badge, the badge of Electromagnetic Field 2022.
 
-Some facts about ducks. Inspired by [@emfducks](https://twitter.com/emfducks) (but not endorsed by them)
+Some facts about ducks. Inspired by [@emfducks](https://twitter.com/emfducks) and (breaking news!) [endorsed by them](https://twitter.com/EmfDucks/status/1533871976422547459)!
 
 Data from the [duck facts API](https://03vpefsitf.execute-api.eu-west-1.amazonaws.com/prod/)
 
