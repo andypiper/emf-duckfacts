@@ -14,6 +14,6 @@ Installable from the [Hatchery](https://2022.badge.emfcamp.org/projects/duckfact
 
 Pull requests are welcomed!
 
-There are some [good issues from the todo list]((https://github.com/andypiper/emf-duckfacts/issues) already, if you want to give any of them a look.
+There are some [good issues from the todo list](https://github.com/andypiper/emf-duckfacts/issues) already, if you want to give any of them a look.
 
  - TODO: make it QUACK
